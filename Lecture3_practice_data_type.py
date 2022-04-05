@@ -140,3 +140,11 @@ print(test_date1.day)
 #date calculation available
 time_since_covid = datetime.datetime.now() - test_date1
 print(time_since_covid)
+
+# datetime package could call eg.
+# datetime.date.today() which gives only date but not time
+# datetime.datetime.now() which gives the full date and time
+
+
+
+#%%
