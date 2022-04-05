@@ -128,6 +128,9 @@ print(set_1)
 dict_1 ={"Lucas":"yj1084", "Rita":"yl4034"}
 print(dict_1['Lucas'])
 
+# Dictionary works with dict() or {key:value}
+dict_2 = dict(a=1, b=2, c=3)
+
 #%% 
 #Dates
 
