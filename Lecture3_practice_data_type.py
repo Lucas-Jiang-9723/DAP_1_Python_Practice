@@ -131,6 +131,22 @@ print(dict_1['Lucas'])
 # Dictionary works with dict() or {key:value}
 dict_2 = dict(a=1, b=2, c=3)
 
+#eample question
+# Question 6: Beginning with the two lists below, write a single dictionary comprehension that
+# turns them into the following dictionary: {'IL':'Illinois', 'IN':'Indiana', 'MI':'Michigan', 'OH':'Ohio'}
+short_names = ['IL', 'IN', 'MI', 'OH']
+long_names  = ['Illinois', 'Indiana', 'Michigan', 'Ohio']
+
+# 1. create an empty new dictionary
+dict_new={}
+
+# 2. use a for loop to append repeatedly
+for i in range(0,4):
+    dict_new[short_names[i]]=long_names[i]
+# 3. the line above explains that assigning values to the corresponding key in the dictionary
+print(dict_new)
+
+
 #%% 
 #Dates
 
@@ -151,3 +167,6 @@ print(time_since_covid)
 
 
 #%%
+# Creating random numbers
+import random
+list_q1 = random.sample(range(1,100),20)
