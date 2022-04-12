@@ -21,7 +21,7 @@ print(new_list_2)
 
 #%%
 #2
-import datetimes
+import datetime
 start_dict = {'noah': '2/23/1999',
               'sarah':'9/1/2001',
               'zach': '8/8/2005'}
@@ -32,10 +32,11 @@ start_dict = {'noah': '2/23/1999',
 #for loop ver
 for key,val in start_dict.items():
     start_dict[key] = datetime.datetime.strptime(val, "%m/%d/%Y").date()
-    
+
 print(start_dict)
 
-
+alternative = {k.capitalize():datetime.datetime.strptime(v,"%m/%d/%Y").date() for k,v in start_dict.items()}
+print(alternative)
 
 
 
