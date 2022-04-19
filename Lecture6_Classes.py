@@ -32,8 +32,9 @@ class Class2():
         self.x = a + b
 #   x is the instance in this case
 
+instance_2 = Class2(10,10)
+print(instance_2.x)
 
-print(Class2(10,10).x)
 print(Class2(20,20).x)
 
 
