@@ -18,16 +18,13 @@ print(na_econ)
 #%%
 #1. write one line that selects only the GDP columns, for the years 
 #   2013-2014
-na_gdp = na_econ[[col for col in na_econ.columns if col.startswith("gdp")]]
-print(na_gdp)
-
-
+na_gdp = na_econ.loc[[row for row in na_econ.index if row in [2013, 2014]],[col for col in na_econ.columns if col.startswith("gdp")]]
+na_gdp_13 = na_econ.loc[ [2013, 2014] , [col for col in na_econ.columns if col.startswith("gdp")] ]
+print(na_gdp_13)
 
 #%%
 #2. the unemployment rate in the USA in 2014 should be 6.2, not 16.2.
 #   write one line that replaces that value
 na_econ.loc[2014,"unemp_usa"] = 6.2
 print(na_econ)
-
-
 #%%

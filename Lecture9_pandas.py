@@ -55,6 +55,10 @@ print(df_1[["month","gdp_il"]])
 list_1 = ["unemp_il", "unemp_wi"]
 print(df_1[list_1])
 
+
+# Select range of columns 
+
+df_1.loc[:,range[1,2]]
 #%% e.g. conditionals in list comprehension
 print(df_1[[col for col in df_1.columns if col.endswith("il")]])
 
@@ -66,6 +70,9 @@ print(np.mean(df_1["unemp_il"]))
 
 # in most cases dataframe also have its own methods
 print(df_1["unemp_il"].mean())
+
+
+
 
 #%% select rows in df
 
@@ -102,6 +109,8 @@ print(combo_2)
 #   Use : to select all rows by default
 df_2 = df_1.loc[ :, ["unemp_il", "unemp_wi"]]
 print(df_2)
+
+
 #%% View a df vs Full copy of a df
 #   Has sth to do with the memory management
 
