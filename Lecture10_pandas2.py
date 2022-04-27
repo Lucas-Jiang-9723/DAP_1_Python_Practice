@@ -110,6 +110,8 @@ print(df_1[(df_1["DATE_1"] > start_date) & (df_1["gdp"] > 10000)])
 
 # argument x takes on each value of a cell only
 
+import statistics as st
+
 #e.g.
 def double(x):
     return x * 2
@@ -123,6 +125,7 @@ print(df_1)
 # argument x takes on the value of one entire column
 def zscore(x):
     return (x - x.mean()) / x.std() #issue need error check
+#    return (x - st.mean(x)) / st.std(x)
 # here x makes sense only if it's an entire column
 df_1["gdp"] = df_1["gdp"].apply(zscore)
 print(df_1)
@@ -133,3 +136,12 @@ print(df_1)
 # argument x takes on each value of a cell
 df_1 = df_1.applymap(double)
 print(df_1)
+
+
+#%%
+def zscore(x):
+    return (x - st.mean(x)) / st.std(x)
+
+list1 = [1, 2, 3, 4, 5]
+
+zscore(list1[2])
