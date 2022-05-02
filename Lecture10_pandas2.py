@@ -123,8 +123,11 @@ print(df_1)
 # this gives us the ability to access the values around the cell that we are operating on: e.g. zscore
 
 # argument x takes on the value of one entire column
+# Apply tries column by column, so if not all columns are numeric, do not use it, use the function directly instead
 def zscore(x):
+    print(x)
     return (x - x.mean()) / x.std() #issue need error check
+
 #    return (x - st.mean(x)) / st.std(x)
 # here x makes sense only if it's an entire column
 df_1["gdp"] = df_1["gdp"].apply(zscore)
@@ -145,3 +148,8 @@ def zscore(x):
 list1 = [1, 2, 3, 4, 5]
 
 zscore(list1[2])
+#%%
+"""
+copy a new df from the original df and add a new column without impacting the original one
+use assign()
+"""
