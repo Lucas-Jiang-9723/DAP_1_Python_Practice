@@ -94,7 +94,7 @@ data = {"student":["A","B","c"],
         "grade2017":[3.0, 2.0, 3.5]
         }
 df = pd.DataFrame(data)
-
+print(df)
 df_wtl = pd.wide_to_long(df, "grade", i="student", j="year")
 print(df_wtl)
 
