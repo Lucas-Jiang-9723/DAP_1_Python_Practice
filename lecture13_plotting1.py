@@ -99,3 +99,5 @@ plot_1.plot(x="values_x", y="values_y")
 # combination - capture the pandas df plot and put into matplotlib to add a dashed line
 ax = plot_1.plot(x="values_x", y="values_y")
 ax.axvline(150, color="k", linestyle=":")
+#%% multiple plots
+plt.subplots(2,2)
