@@ -60,7 +60,7 @@ data = response.content  # this is a binary content, and not readable text
 
 
     
-#%% Aside: Contexxt management
+#%% Aside: Context management
 with open(r'c:\users\jeff levy\desktop\interstellar.pdf', 'wb') as ofile:
     ofile.write(data)
     # closes automatically when indenting is stopped
